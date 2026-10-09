@@ -1,0 +1,334 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Background -->
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#111D42"/>
+      <stop offset="100%" stop-color="#030817"/>
+    </radialGradient>
+
+    <!-- Blue/Purple ring -->
+    <linearGradient id="ring" x1="40" y1="40" x2="470" y2="470">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#5865F2"/>
+      <stop offset="100%" stop-color="#C850FF"/>
+    </linearGradient>
+
+    <!-- Robot body -->
+    <linearGradient id="body" x1="150" y1="250" x2="370" y2="480">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#E7ECF8"/>
+      <stop offset="100%" stop-color="#BFC9DD"/>
+    </linearGradient>
+
+    <!-- Face -->
+    <linearGradient id="face" x1="160" y1="120" x2="360" y2="300">
+      <stop offset="0%" stop-color="#162653"/>
+      <stop offset="100%" stop-color="#030817"/>
+    </linearGradient>
+
+    <!-- Cyan -->
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6FFFFF"/>
+      <stop offset="100%" stop-color="#008DFF"/>
+    </linearGradient>
+
+    <!-- Purple -->
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A970FF"/>
+      <stop offset="100%" stop-color="#E85CFF"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+
+  <!-- ================= BACKGROUND ================= -->
+
+  <circle cx="256" cy="256" r="250" fill="url(#bg)"/>
+
+  <!-- Glow behind logo -->
+  <circle cx="256" cy="256" r="225"
+          stroke="#315BFF"
+          stroke-width="25"
+          opacity="0.25"
+          filter="url(#softGlow)"/>
+
+  <!-- Main ring -->
+  <circle cx="256" cy="256" r="225"
+          stroke="url(#ring)"
+          stroke-width="12"/>
+
+
+  <!-- ================= SOUND WAVES ================= -->
+
+  <g filter="url(#glow)" stroke-linecap="round">
+
+    <!-- Left -->
+    <path d="M70 245V270" stroke="#62DFFF" stroke-width="8"/>
+    <path d="M88 230V285" stroke="#62DFFF" stroke-width="8"/>
+    <path d="M106 215V300" stroke="#62DFFF" stroke-width="8"/>
+    <path d="M124 235V280" stroke="#8A8CFF" stroke-width="8"/>
+
+    <!-- Right -->
+    <path d="M388 235V280" stroke="#62DFFF" stroke-width="8"/>
+    <path d="M406 215V300" stroke="#62DFFF" stroke-width="8"/>
+    <path d="M424 230V285" stroke="#9C7CFF" stroke-width="8"/>
+    <path d="M442 245V270" stroke="#D36AFF" stroke-width="8"/>
+
+  </g>
+
+
+  <!-- ================= ROBOT HEAD ================= -->
+
+  <!-- Head outer -->
+  <rect x="105" y="105"
+        width="302"
+        height="235"
+        rx="105"
+        fill="url(#body)"
+        stroke="#B7C4DF"
+        stroke-width="3"/>
+
+  <!-- Head highlight -->
+  <path d="M155 130
+           C190 105 320 100 365 135"
+        stroke="white"
+        stroke-width="12"
+        stroke-linecap="round"
+        opacity="0.65"/>
+
+
+  <!-- ================= HEADPHONES ================= -->
+
+  <!-- Left headphone -->
+  <ellipse cx="112" cy="220"
+           rx="38" ry="58"
+           fill="#152653"
+           stroke="#FFFFFF"
+           stroke-width="8"/>
+
+  <ellipse cx="112" cy="220"
+           rx="20" ry="35"
+           fill="url(#cyan)"
+           opacity="0.9"/>
+
+  <!-- Right headphone -->
+  <ellipse cx="400" cy="220"
+           rx="38" ry="58"
+           fill="#152653"
+           stroke="#FFFFFF"
+           stroke-width="8"/>
+
+  <ellipse cx="400" cy="220"
+           rx="20" ry="35"
+           fill="url(#cyan)"
+           opacity="0.9"/>
+
+
+  <!-- ================= FACE ================= -->
+
+  <rect x="140" y="145"
+        width="232"
+        height="145"
+        rx="65"
+        fill="url(#face)"
+        stroke="#263B72"
+        stroke-width="4"/>
+
+
+  <!-- Eyes -->
+
+  <path d="M185 205
+           Q205 180 225 205"
+        stroke="#65EFFF"
+        stroke-width="13"
+        stroke-linecap="round"
+        fill="none"
+        filter="url(#glow)"/>
+
+  <path d="M287 205
+           Q307 180 327 205"
+        stroke="#65EFFF"
+        stroke-width="13"
+        stroke-linecap="round"
+        fill="none"
+        filter="url(#glow)"/>
+
+
+  <!-- Cheeks -->
+
+  <path d="M190 235L180 243"
+        stroke="#7767FF"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <path d="M202 235L192 243"
+        stroke="#7767FF"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <path d="M310 235L300 243"
+        stroke="#7767FF"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <path d="M322 235L312 243"
+        stroke="#7767FF"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+
+  <!-- Smile -->
+
+  <path d="M235 238
+           Q256 260 277 238"
+        fill="#A96DFF"
+        stroke="#C98BFF"
+        stroke-width="3"/>
+
+
+  <!-- ================= MICROPHONE ================= -->
+
+  <path d="M360 270
+           Q385 260 394 240"
+        stroke="#172A54"
+        stroke-width="8"
+        fill="none"/>
+
+  <circle cx="382" cy="265"
+          r="16"
+          fill="url(#cyan)"
+          stroke="#FFFFFF"
+          stroke-width="3"/>
+
+
+  <!-- ================= NECK ================= -->
+
+  <ellipse cx="256" cy="340"
+           rx="47" ry="18"
+           fill="#152653"/>
+
+  <ellipse cx="256" cy="336"
+           rx="25" ry="8"
+           fill="#00D9FF"
+           filter="url(#glow)"/>
+
+
+  <!-- ================= BODY ================= -->
+
+  <path d="M145 345
+           Q256 315 367 345
+           L400 470
+           Q256 510 112 470
+           Z"
+        fill="url(#body)"
+        stroke="#B8C5DE"
+        stroke-width="4"/>
+
+
+  <!-- Shoulder details -->
+
+  <ellipse cx="142" cy="380"
+           rx="35" ry="48"
+           fill="#DDE5F4"/>
+
+  <ellipse cx="370" cy="380"
+           rx="35" ry="48"
+           fill="#DDE5F4"/>
+
+
+  <!-- ================= CHEST AI WAVE ================= -->
+
+  <circle cx="256" cy="405"
+          r="48"
+          fill="#071536"
+          stroke="#54EFFF"
+          stroke-width="5"
+          filter="url(#glow)"/>
+
+  <!-- Audio waveform -->
+
+  <g stroke="#61F3FF"
+     stroke-width="8"
+     stroke-linecap="round">
+
+    <path d="M228 415V395"/>
+    <path d="M241 422V388"/>
+    <path d="M256 430V380"/>
+    <path d="M271 422V388"/>
+    <path d="M284 415V395"/>
+
+  </g>
+
+
+  <!-- ================= WAVING HAND ================= -->
+
+  <!-- Arm -->
+  <path d="M145 375
+           Q110 390 92 350"
+        stroke="url(#body)"
+        stroke-width="40"
+        stroke-linecap="round"/>
+
+  <!-- Palm -->
+  <ellipse cx="82" cy="330"
+           rx="38"
+           ry="45"
+           fill="url(#body)"
+           stroke="#B8C5DE"
+           stroke-width="4"/>
+
+  <!-- Fingers -->
+
+  <path d="M58 325L43 292"
+        stroke="url(#body)"
+        stroke-width="17"
+        stroke-linecap="round"/>
+
+  <path d="M70 315L62 277"
+        stroke="url(#body)"
+        stroke-width="17"
+        stroke-linecap="round"/>
+
+  <path d="M84 313L84 273"
+        stroke="url(#body)"
+        stroke-width="17"
+        stroke-linecap="round"/>
+
+  <path d="M98 317L106 284"
+        stroke="url(#body)"
+        stroke-width="17"
+        stroke-linecap="round"/>
+
+
+  <!-- Palm center -->
+  <ellipse cx="82" cy="338"
+           rx="17"
+           ry="20"
+           fill="#172653"/>
+
+
+  <!-- ================= SPARKLES ================= -->
+
+  <g fill="url(#cyan)" filter="url(#glow)">
+    <path d="M145 115L150 128L163 133L150 138L145 151L140 138L127 133L140 128Z"/>
+    <path d="M390 125L394 136L405 140L394 144L390 155L386 144L375 140L386 136Z"/>
+  </g>
+
+  <path d="M420 165L424 174L433 178L424 182L420 191L416 182L407 178L416 174Z"
+        fill="url(#purple)"/>
+
+</svg>
